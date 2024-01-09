@@ -12,7 +12,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Print Date
-        run: echo date
+        run: date
   job3:
     runs-on: macos-latest
     steps:
