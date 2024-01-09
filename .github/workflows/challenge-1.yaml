@@ -1,0 +1,26 @@
+name: Challenge 1
+
+on: push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Date
+        run: date
+  job2:
+    runs-on: windows-latest
+    steps:
+      - name: Print Date
+        run: echo  %date%
+  job3:
+    runs-on: macos-latest
+    steps:
+      - name: Print Date
+        run: date
+  job4:
+    runs-on: macos-latest
+    needs: [job1, job2, job3]
+    steps:
+      - name: Print Date
+        run: date
